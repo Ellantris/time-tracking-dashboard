@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="Daily" class="tabcontent" style="display: flex">
+        <div class="name-exterior">
+            <div class="name-card">
+                <div class="name-card-interior">
+                    <img class="profile-photo" src=images/image-jeremy.png alt="client profile photo">
+                    <div class="name-card-text">
+                        <p class="name-card-small">Report for</p>
+                        <p class="name-card-large">Jeremy Robson</p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Daily')">Daily</button>
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Weekly')">Weekly</button>
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Monthly')">Monthly</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex-right">
+            <div class="position-one"> <!--start of first card-->
+                <div class="top-image-one"> 
+                    <img class="card-image-one" src=images/icon-work.svg alt="a briefcase">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Work </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 5hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 7hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of first card-->
+            <div class="position-two"> <!--start of second card-->
+                <div class="top-image-two">
+                    <img class="card-image-two" src=images/icon-play.svg alt="a gaming controller">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Play </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 1hr </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 2hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of second card-->
+            <div class="position-three"> <!--start of third card-->
+                <div class="top-image-three">
+                    <img class="card-image-three" src=images/icon-study.svg alt= "an open book">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Study </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 0hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 1hr </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of third card-->
+            <div class="position-four"> <!--start of fourth card-->
+                <div class="top-image-four">
+                    <img class="card-image-four" src= images/icon-exercise.svg alt="a stick figure running">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Exercise </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 1hr </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 1hr </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fourth card-->
+            <div class="position-five"> <!--start of fifth card-->
+                <div class="top-image-five">
+                    <img class="card-image-five" src=images/icon-social.svg alt="a speech bubble">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Social </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 1hr </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 3hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fifth card-->
+            <div class="position-six"> <!--start of sixth card-->
+                <div class="top-image-six">
+                    <img class="card-image-six" src= images/icon-self-care.svg alt="a plus sign inside of a heart">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Self Care</p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="daily"> 0hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="daily-before"> Previous - 1hr </p> <!-- daily -->
+                    </div>
+                </div>
+            </div>
+        </div> <!--end of sixth card-->
+    </div> <!--page two below-->
+    <div id="Weekly" class="tabcontent" style="display:none">
+        <div class="name-exterior">
+            <div class="name-card">
+                <div class="name-card-interior">
+                    <img class="profile-photo" src=images/image-jeremy.png alt="client profile photo">
+                    <div class="name-card-text">
+                        <p class="name-card-small">Report for</p>
+                        <p class="name-card-large">Jeremy Robson</p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Daily')">Daily</button>
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Weekly')">Weekly</button>
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Monthly')">Monthly</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex-right">
+            <div class="position-one"> <!--start of first card-->
+                <div class="top-image-one"> 
+                    <img class="card-image-one" src=images/icon-work.svg alt="a briefcase">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Work </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 32hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 36hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of first card-->
+            <div class="position-two"> <!--start of second card-->
+                <div class="top-image-two">
+                    <img class="card-image-two" src=images/icon-play.svg alt="a gaming controller">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Play </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 10hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 8hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of second card-->
+            <div class="position-three"> <!--start of third card-->
+                <div class="top-image-three">
+                    <img class="card-image-three" src=images/icon-study.svg alt= "an open book">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Study </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 4hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 7hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of third card-->
+            <div class="position-four"> <!--start of fourth card-->
+                <div class="top-image-four">
+                    <img class="card-image-four" src= images/icon-exercise.svg alt="a stick figure running">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Exercise </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 4hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 5hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fourth card-->
+            <div class="position-five"> <!--start of fifth card-->
+                <div class="top-image-five">
+                    <img class="card-image-five" src=images/icon-social.svg alt="a speech bubble">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Social </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 5hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 10hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fifth card-->
+            <div class="position-six"> <!--start of sixth card-->
+                <div class="top-image-six">
+                    <img class="card-image-six" src= images/icon-self-care.svg alt="a plus sign inside of a heart">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Self Care</p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="weekly"> 2hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="weekly-before"> Previous - 2hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of sixth card-->
+        </div>
+    </div>
+    <div id="Monthly" class="tabcontent" style="display: none">
+        <div class="name-exterior">
+            <div class="name-card">
+                <div class="name-card-interior">
+                    <img class="profile-photo" src=images/image-jeremy.png alt="client profile photo">
+                    <div class="name-card-text">
+                        <p class="name-card-small">Report for</p>
+                        <p class="name-card-large">Jeremy Robson</p>
+                    </div>
+                </div>
+                <div class="tab">
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Daily')">Daily</button>
+                    <button class="tablinks" id="buttons" onclick="openTime(event, 'Weekly')">Weekly</button>
+                    <button class="tablinks" id ="buttons" onclick="openTime(event, 'Monthly')">Monthly</button>
+                </div>
+            </div>
+        </div>
+        <div class="flex-right">
+            <div class="position-one"> <!--start of first card-->
+                <div class="top-image-one"> 
+                    <img class="card-image-one" src=images/icon-work.svg alt="a briefcase">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Work </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 103hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 128hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of first card-->
+            <div class="position-two"> <!--start of second card-->
+                <div class="top-image-two">
+                    <img class="card-image-two" src=images/icon-play.svg alt="a gaming controller">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Play </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 23hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 29hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of second card-->
+            <div class="position-three"> <!--start of third card-->
+                <div class="top-image-three">
+                    <img class="card-image-three" src=images/icon-study.svg alt= "an open book">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Study </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 13hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 19hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of third card-->
+            <div class="position-four"> <!--start of fourth card-->
+                <div class="top-image-four">
+                    <img class="card-image-four" src= images/icon-exercise.svg alt="a stick figure running">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Exercise </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 11hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 18hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fourth card-->
+            <div class="position-five"> <!--start of fifth card-->
+                <div class="top-image-five">
+                    <img class="card-image-five" src=images/icon-social.svg alt="a speech bubble">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Social </p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 21hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 23hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of fifth card-->
+            <div class="position-six"> <!--start of sixth card-->
+                <div class="top-image-six">
+                    <img class="card-image-six" src= images/icon-self-care.svg alt="a plus sign inside of a heart">
+                </div>
+                <div class="activity-card">
+                    <div class="activity-card-header">
+                        <p class="card-title"> Self Care</p>
+                        <img class="triple-dot" src=images/icon-ellipsis.svg alt="a set of ellipses">
+                    </div>
+                    <div id="page-one">
+                        <p class="card-text-large" id="monthly"> 7hrs </p> <!-- daily -->
+                        <p class="card-text-small" id="monthly-before"> Previous - 11hrs </p> <!-- daily -->
+                    </div>
+                </div>
+            </div> <!--end of sixth card-->
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
